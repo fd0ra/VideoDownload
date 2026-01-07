@@ -1,0 +1,48 @@
+# --- 1. Python ve Sistem Gereksizleri ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.idea/
+.vscode/
+.DS_Store
+
+# --- 2. Hassas Dosyalar (Güvenlik) ---
+# API key veya şifre içerebilecek dosyalar
+.env
+.env.*
+config.py
+secrets.py
+api_keys.txt
+*.key
+*.pem
+
+# --- 3. YouTube Giriş Bilgileri (ÇOK ÖNEMLİ) ---
+# Senin özel oturum çerezlerin
+cookies.txt
+*.cookie
+*.cookies
+
+# --- 4. İndirilen Videolar ve Sesler ---
+# Test ederken indirdiğin dosyalar repoya gitmesin
+*.mp4
+*.mp3
+*.m4a
+*.webm
+*.mkv
+*.wav
+*.part
+*.ytdl
+
+# --- 5. Kişisel Test Verileri ---
+# Deneme yaparken linkleri kaydettiğin not defterleri
+links.txt
+urls.txt
+linkler.txt
+test.py
+deneme.py
+
+# --- 6. Loglar ---
+*.log
