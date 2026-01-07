@@ -32,14 +32,18 @@ def downloader():
     choice = input("Choice (1 or 2): ").strip()
 
     # 4. Configure yt-dlp options
+    # Set download path to user's Downloads folder
+    downloads_path = os.path.expanduser('~/Downloads')
+    os.makedirs(downloads_path, exist_ok=True)  # Create if doesn't exist
+    
     ydl_opts = {
-        'outtmpl': '%(title)s.%(ext)s', # Output filename pattern
+        'outtmpl': os.path.join(downloads_path, '%(title)s.%(ext)s'), # Output to Downloads folder
         'ignoreerrors': True,            # Continue playlist even if one video fails
         'no_warnings': True,
         'quiet': False,
     }
 
-    # Add cookie file if requested
+   # # Add cookie file if requested
     if use_cookies:
         ydl_opts['cookiefile'] = 'cookies.txt'
 
